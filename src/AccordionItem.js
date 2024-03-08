@@ -7,7 +7,8 @@ export default function AccordionItem({
 }) {
   const isOpen = num === curOpen;
 
-  function handleToggle() {
+  function handleToggle(e) {
+    if (e.target.closest(".content-box")) return;
     onOpen(isOpen ? null : num);
   }
 

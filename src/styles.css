@@ -12,6 +12,7 @@ body {
 
 .accordion {
   width: 700px;
+  max-width: 100%;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -49,6 +50,7 @@ body {
   grid-column: 2 / -1;
   padding-bottom: 16px;
   line-height: 1.6;
+  cursor: context-menu;
 }
 
 .content-box ul {
@@ -69,4 +71,30 @@ body {
 .open .number,
 .open .title {
   color: #087f5b;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .item {
+  padding: 8px 9px;
+  padding-right: 20px;
+
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.number {
+  font-size: 15px;
+}
+
+.title,
+.icon {
+  font-size: 15px;
+}
+.content-box ul {
+  margin-left: 8px;
+  margin-top: 8px;
+
+  gap: 6px;
+}
+
 }
